@@ -18,10 +18,7 @@ def looper(lower: float, upper: float) -> list:
         results.append(numerical_integration(lower, upper, N))
     return results
 
-@app.route('/numericalintegralservice/<lower>/<upper>')
-def numerical_integral_service(lower, upper):
+@app.route('/integralapp/<lower>/<upper>')
+def show_user_profile(lower, upper):
     result = looper(float(lower), float(upper))
-    return {'result': result}
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    return f'User {result}'
