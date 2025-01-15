@@ -23,5 +23,5 @@ def show_user_profile(lower, upper):
     result = looper(float(lower), float(upper))
     return f'User {result}'
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+if __name__ == '__main__':
+   app.run()
